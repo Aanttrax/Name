@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { query } = require('express');
 const { Op } = require('sequelize');
 const { Name } = require('../db');
 
@@ -19,14 +20,16 @@ router.get('/', async(req, res) => {
 
 router.post('/add', async (req, res) => {
     
-    let { name } = req.body;
-    console.log(req.body)
+    let { newname } = req.body;
+
     try {
-        let addname = await Name.findOrCreate({
+        let add = await Name.findOrCreate({
             where: {
-                name,
+                name:newname
             }
         });
+
+        res.json(add);
 
     }catch (error){
         res.status(505).send(error)

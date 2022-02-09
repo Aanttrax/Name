@@ -6,8 +6,8 @@ module.exports = (sequelize) => {
     sequelize.define('name', {
 
             name: {
-            type: DataTypes.STRING,
-            allowNull: false,
+                type: DataTypes.STRING,
+                allowNull: false,
             },
         }
 //,{timestamps: false,}

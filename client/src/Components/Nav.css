@@ -1,0 +1,29 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: 600;
+}
+
+.cont {   
+    background-color: rgb(172, 82, 40);
+    padding: 10px;
+    height: 7vh;
+}
+
+.link {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.home {
+    border-radius: 50%;
+}
+
+.nav .link img {
+    padding: 8px;
+}
